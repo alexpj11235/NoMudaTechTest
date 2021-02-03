@@ -1,38 +1,259 @@
 .App {
+  background-color: rgb(252, 250, 158);
+  display:grid;
+  grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+  grid-template-rows: 5px 90px 620px 100px;
+}
+
+.CurrentHeader{
+  margin-bottom: 20px;
+  font-size: 80px;
+  font-family: Garamond, "Times New Roman", serif;
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.PreviousHeader{
+  margin-bottom: 20px;
+  font-size: 80px;
+  font-family: Garamond, "Times New Roman", serif;
+  text-align: center;
+  grid-column-start:4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 35;
+}
+
+.ButtonImages{
+  margin-top:  5px;
+  height : 70px;
+  width: 70px;
+}
+
+.ExclamationButtonImage{
+margin-bottom: 10px;
+  height : 100px;
+  width: 60px;
+}
+
+.CurrentList {
+  border-style: solid;
+  box-shadow:5px 10px #888888;
+  width: 450px;
+  border-radius: 25px;
+  background-color:white;
+  font-size: 30px;
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.PreviousList {
+  border-style: solid;
+  box-shadow:5px 10px #888888;
+  width: 450px;
+  border-radius: 25px;
+  background-color:white;
+  font-size: 30px;
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.List{
+
+  text-align: center;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.Buttons{
+  border-style: solid;
+  margin-right: 50px;
+  border-radius: 25px;
+  background-color:white;
+  justify-items: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.PreviousToCurrentButton {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.CurrentToPreviousButton {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end:3;
+}
+
+
+.ItemUpButton {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.ItemDownButton {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.AddItemButton {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end:6;
+}
+
+.DeleteItemButton{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end:7;
+}
+
+.PrioritizeItemButton{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end:8;
+}
+
+.AddItemModal{
+  margin-top: 200px;
+  margin-left: 525px;
+  background-color: white;
+  width: 400px;
+  height:200px
+}
+
+.AddItemForm{
+
+  display:grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;  
+}
+
+.AddItemName{
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end:2;
+}
+
+.AddItemInput{
+  justify-self: center;
+  width:200px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end:3;
+}
+.CCheck{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end:4;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.PCheck{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end:4;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.CurrentCheck{
+  justify-self: right;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+}
+
+.PreviousCheck{
+  justify-self: right;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+}
+
+.CText{
+ 
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.PText{
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.SubmitButton{
+  justify-self: center;
+  width:200px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start:4;
+  grid-row-end:5;
+}
+
+.Lists{
+ 
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.List {
+  
+  color: rgb(54, 54, 54);
+}
+
+.SelectedItem {
+
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  border-radius: 20px;
+  background-color: #7c58ff;
+  color:white;
+  list-style-position: inside;
+  text-align: center;
+
+}
+
+.Item{
+
+
+
+  list-style-position: inside;
+  margin-top: 5px;
+  margin-bottom: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
