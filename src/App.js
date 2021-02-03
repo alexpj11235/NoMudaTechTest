@@ -54,15 +54,20 @@ deleteItemClick = ()=>{
 
     if(this.state.selected.listType === "Current"){
        const index = this.state.currentItems.indexOf(this.state.selected.name) 
+
        const newCurrentItems = this.state.currentItems
        newCurrentItems.splice(index , 1)
        this.setState({currentItems: newCurrentItems})
+       this.setState({selected: {name:"" , listType:"" }})
     }
     if(this.state.selected.listType === "Previous"){
       const index = this.state.previousItems.indexOf(this.state.selected.name) 
-      const newPreviousItems = this.state.previousItems
-      newPreviousItems.splice(index , 1)
-      this.setState({previousItems: newPreviousItems})
+
+
+        const newPreviousItems = this.state.previousItems
+        newPreviousItems.splice(index , 1)
+        this.setState({previousItems: newPreviousItems})
+      this.setState({selected: {name:"" , listType:"" }})
    }
   
 }
